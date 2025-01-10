@@ -19,7 +19,7 @@ public String changeTimeFormat(String strTime) {
     
     if(hour >= 12 ) {
         amOrPm = 'PM';
-    } else if(hour == 0) {
+    } else if(hour < 12) {
         hour = hoursMap.get(hour);
     }
     String hourString = String.valueOf(hour);
