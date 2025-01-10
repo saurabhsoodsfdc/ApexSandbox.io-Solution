@@ -25,6 +25,4 @@ public String changeTimeFormat(String strTime) {
     String hourString = String.valueOf(hour);
 
     return hour.leftpad(2, '0') + ':'+timeStrings[1].leftpad(2, '0');
-
-
 }
