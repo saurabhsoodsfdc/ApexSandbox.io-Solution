@@ -12,7 +12,7 @@ public String changeTimeFormat(String strTime) {
         22 => 10,
         23 => 11,
         0 => 12
-    }
+    };
     List<String> timeStrings = strTime.split(':');
     Integer hour = Integer.valueOf(timeStrings[0]);
     String amOrPm = 'AM';
