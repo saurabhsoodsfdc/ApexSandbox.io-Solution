@@ -1,0 +1,30 @@
+public String changeTimeFormat(String strTime) {
+    Map<Intger, Intger> hoursMap = new Map<Intger, Integer> {
+        13 => 1,
+        14 => 2,
+        15 => 3, 
+        16 => 4
+        17 => 5, 
+        18 => 6, 
+        19 => 7,
+        20 => 8,
+        21 => 9,
+        22 => 10,
+        23 => 11,
+        0 => 12
+    }
+    List<String> timeStrings = strTime.split(':');
+    Integer hour = Integer.valueOf(timeStrings[0]);
+    String amOrPm = 'AM';
+    
+    if(hour > 12 ) {
+        amOrPm = 'PM';
+    } else if(hour == 0) {
+        hour = hoursMap.get(hour);
+    }
+    String hourString = String.valueOf(hour);
+
+    return hour.leftpad(2, '0') + ':'+timeStrings[1].leftpad(2, '0');
+
+
+}
