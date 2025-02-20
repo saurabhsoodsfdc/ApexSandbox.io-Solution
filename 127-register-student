@@ -1,0 +1,10 @@
+public String registerStudent(String name, String phone, String email) {
+    apxio__Student__c student = new apxio__Student__c();
+    student.apxio__Phone__c = phone;
+    student.apxio__Email__c = email;
+    student.name = name;
+
+    insert student;
+
+    return [SELECT Id, apxio__Registration_Number__c FROM apxio__Student__c WHERE Id =: student.id]?.apxio__Registration_Number__c;
+}
