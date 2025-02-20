@@ -1,3 +1,5 @@
 public List<apxio__Student__c> selectActiveStudents() {
-    return [SELECT Name, Id, apxio__Active__c FROM apxio__Student__c WHERE Id != null && Name != null & apxio__Active__c = true ];
+    return [SELECT Name, Id, apxio__Active__c FROM apxio__Student__c 
+    WHERE Id != null AND 
+    Name != null AND apxio__Active__c = true ];
 }
