@@ -1,8 +1,8 @@
 public void enrollStudents(List<String> emails, String className) {
     Map<String, Id> studentMap = new Map<String, Id>();
 
-    for(apxio__Student__c record : [SELECT Id, Email FROM apxio__Student__c WHERE apxio__Email__c IN: emails]) {
-        studentMap.put(record.Email, record.Id);
+    for(apxio__Student__c record : [SELECT Id, apxio__Email__c FROM apxio__Student__c WHERE apxio__Email__c IN: emails]) {
+        studentMap.put(record.apxio__Email__c, record.Id);
     }
     apxio__Class__c classId = [SELECT Id FROM apxio__Class__c WHERE Name = :className]?.Id;
 
