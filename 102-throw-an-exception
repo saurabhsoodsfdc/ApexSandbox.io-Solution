@@ -1,7 +1,7 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
     if(accounts == null) {
-        return new throw IllegalArgumentException('accounts should not be null');
+        return throw new  IllegalArgumentException('accounts should not be null');
     }
     for(Account acc: accounts) {
 
