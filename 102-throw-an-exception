@@ -5,7 +5,8 @@ public List<Account> checkAccounts(List<Account> accounts)
     }
     for(Account acc: accounts) {
 
-    } 
+    }
+    return new List<Account>(); 
 }
 
 //do not remove the following custom-defined exception
