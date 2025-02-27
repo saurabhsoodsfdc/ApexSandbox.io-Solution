@@ -12,7 +12,7 @@ public List<Account> checkAccounts(List<Account> accounts)
     if(hasNullBillingCity) {
         throw new AccountException('Invalid BillingCity');
     }
-    return new List<Account>(); 
+    return accounts; 
 }
 
 //do not remove the following custom-defined exception
