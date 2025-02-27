@@ -1,0 +1,13 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    if(accounts == null) {
+        return new throw IllegalArgumentException('accounts should not be null');
+    }
+    for(Account acc: accounts) {
+
+    } 
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
+public class IllegalArgumentException extends Exception {}
