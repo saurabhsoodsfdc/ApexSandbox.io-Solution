@@ -3,8 +3,14 @@ public List<Account> checkAccounts(List<Account> accounts)
     if(accounts == null) {
         throw new  IllegalArgumentException('accounts should not be null');
     }
+    Boolean hasNullBillingCity = false;
     for(Account acc: accounts) {
-
+        if(acc.BillingCity == null) {
+            hasNullBillingCity = true;
+        }
+    }
+    if(hasNullBillingCity) {
+        throw new AccountException('Invalid BillingCity');
     }
     return new List<Account>(); 
 }
