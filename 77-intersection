@@ -1,10 +1,9 @@
 public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
-    Set<Integer> intersection = new Set<Integer>();
-    intersection.addAll(set1);
+
     Set<Integer> finalSet = new Set<Integer>();
     for(Integer value: set2) {
-        if(intersection.contains(value)) {
-            finalSet.add(intersection);
+        if(set1.contains(value)) {
+            finalSet.add(value);
         }
     }
     return finalSet;
