@@ -1,0 +1,10 @@
+public Set<Integer> setUnion(Set<Integer> set1, Set<Integer> set2) {
+    Set<Integer> union = new Set<Integer>();
+    union.addall(set1);
+    for(Integer value : set2) {
+        if(!union.contains(value)) {
+            union.add(value);
+        }
+    }
+    return union;
+}
