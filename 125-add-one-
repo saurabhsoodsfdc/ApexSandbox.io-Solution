@@ -6,7 +6,7 @@ public void plusOne(List<Integer> numbers) {
   }
 
   sum += 1;
-  for(Integer i = 0; i <= sum.size(); i++) {
+  for(Integer i = 0; i <= sum.length(); i++) {
       numbers[i] = sum[i];
   }  
 
