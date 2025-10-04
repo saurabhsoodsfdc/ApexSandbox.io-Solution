@@ -1,13 +1,23 @@
 public void plusOne(List<Integer> numbers) {
     
-  Integer sum = 0;
-  for(Integer num: numbers) {
-      sum += num;
-  }
-
-  sum += 1;
-  for(Integer i = 0; i <= sum.length(); i++) {
-      numbers[i] = sum[i];
-  }  
+ Integer n = numbers.size();
+       Integer carry = 1;
+        
+        for(Integer i = n -1; i > = 0 && carry > 0; i--) {
+           Integer digit = numbers[i];
+           Integer sum = digit + carry;
+           
+            
+           System.debug('sum =>'+ sum);
+             // The new digit at this position is the remainder (sum % 10)
+            numbers[i] = Math.mod(sum, 10);
+            System.debug('numbers =>'+ numbers);
+            // The new carry is the quotient (sum / 10)
+            carry = sum / 10;
+            System.debug('carry =>'+ carry);
+            
+ 
+        }
+    }  
 
 }
