@@ -15,8 +15,12 @@ public void plusOne(List<Integer> numbers) {
             // The new carry is the quotient (sum / 10)
             carry = sum / 10;
             System.debug('carry =>'+ carry);
-            
- 
         }
+
+        if (carry > 0) {
+            // Insert the remaining carry (which must be 1) at the beginning of the list
+            numbers.add(0, 1);
+        }
+
         
 }  
