@@ -1,0 +1,6 @@
+public void plusOne(List<Integer> numbers) {
+    
+    if(numbers == null || numbers.size()== 0) {
+        return;
+    }
+}
