@@ -1,0 +1,25 @@
+public static String reverseWords(String str){
+        
+        if(String.isblank(str)) {
+            return str;
+        }
+        List<String> parts = str.split(' ');         
+     
+        for(Integer i =0; i < parts.size(); i++) {
+           		parts[i] = reverseString(parts[i]); 
+           
+        }
+        
+      return String.join(parts, ' ');
+    }
+    
+    public static String reverseString(String str) {
+        
+        String reverseString = '';
+        for(Integer i = str.length()-1 ; i >= 0; i--) {
+            
+          reverseString += str.subString(i, i+1);   
+        }
+        
+     return reverseString.trim();
+    }
