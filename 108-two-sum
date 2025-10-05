@@ -1,0 +1,20 @@
+public static List<Integer> twoSum(List<Integer> nums, Integer target) {
+        Map<Integer, Integer> sums = new Map<Integer, Integer>();
+        List<Integer> sumOfTwo = new List<Integer>();
+        for(Integer i = 0; i < nums.size(); i++) {
+            Integer num = nums[i];
+           	Integer remaining = target - num;
+            
+            if(sums.containsKey(remaining)) {
+                   sums.put(num, i);
+                   sumOfTwo.add(sums.get(remaining));
+                   sumOfTwo.add(i);
+                return sumOfTwo;
+            }
+            
+            sums.put(num, i);
+        }
+        
+        return sumOfTwo;
+    }
+}
