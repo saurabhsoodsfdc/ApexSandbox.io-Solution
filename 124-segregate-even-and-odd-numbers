@@ -6,7 +6,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
                 left++;
             }
             
-            while (left < right && math.mod(numbers[right], 2) != 0) {
+            while (left < right && math.mod(numbers[right], 2) == 1) {
                 right--;
             }
             //left  = 0 => 3 
