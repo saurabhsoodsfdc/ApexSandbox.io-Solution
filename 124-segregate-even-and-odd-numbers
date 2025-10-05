@@ -19,7 +19,5 @@ public static void segregateEvenOdd(List<Integer> numbers){
                 right--;
             }
         }
-        
-        return numbers;
 
 }
