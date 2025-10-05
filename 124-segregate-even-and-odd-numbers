@@ -21,6 +21,5 @@ public static void segregateEvenOdd(List<Integer> numbers){
         }
         
         return numbers;
-	}
 
 }
