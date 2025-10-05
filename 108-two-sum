@@ -6,8 +6,9 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
            	Integer remaining = target - num;
             
             if(sums.containsKey(remaining)) {
-                   sums.put(num, i);
+                   
                    sumOfTwo.add(sums.get(remaining));
+                   sums.put(num, i);
                    sumOfTwo.add(i);
                 return sumOfTwo;
             }
