@@ -17,4 +17,3 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
         
         return sumOfTwo;
     }
-}
